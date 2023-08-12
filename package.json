@@ -8,7 +8,7 @@
   "author": "jhonarias1322@gmail.com",
   "license": "ISC",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon --experimental-json-modules src/server.js",
+    "dev": "cross-env NODE_ENV=production nodemon --experimental-json-modules src/server.js",
     "start": "cross-env NODE_ENV=production node src/server.js",
     "qa": "cross-env NODE_ENV=qa nodemon --experimental-json-modules src/server.js"
   },
