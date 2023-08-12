@@ -10,8 +10,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon --experimental-json-modules src/server.js",
     "start": "cross-env NODE_ENV=production node src/server.js",
-    "qa": "cross-env NODE_ENV=qa nodemon --experimental-json-modules src/server.js",
-    "migrate": "node --experimental-json-modules src/initialConfig/cityMigration.js"
+    "qa": "cross-env NODE_ENV=qa nodemon --experimental-json-modules src/server.js"
   },
   "dependencies": {
     "@sendgrid/mail": "^7.4.6",

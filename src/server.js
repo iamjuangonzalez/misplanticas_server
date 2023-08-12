@@ -1,6 +1,6 @@
 /**
  * @name Main: Server
- * @author jhonarias1322@gmail.com
+ * @author juanjosegonzalezdulcey@gmail.com
  * @description
  * Here is the initialization of the server.
  */
@@ -13,7 +13,6 @@ import app from './app.js';
 import config from './config/index.js';
 import db from './db.js';
 
-import { CreateCities, CreateCountries } from './initialConfig/cityMigration.js';
 
 /**
  * Create http server.
@@ -42,10 +41,6 @@ if (cluster.isPrimary) {
 } else {
   db.init()
     .then(async () => {
-      /* startAll(); */
-      await CreateCountries();
-      await CreateCities();
-
       http.listen(app.get('port'), () => {
         console.log(
           '%s App is running at http://%s:%d in %s mode',
